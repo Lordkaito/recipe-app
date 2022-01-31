@@ -5,7 +5,7 @@
         <li><%= link_to "Foods", [current_user, :foods] %></li>
         <li><%= link_to "Recipes", [current_user, :recipes] %></li>
         <li><%= link_to "Public Recipes", public_recipes_path %></li>
-        <li><%= link_to "Logout", destroy_user_session_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :post %></li>
       </ul>
     </nav>
   <% end %>

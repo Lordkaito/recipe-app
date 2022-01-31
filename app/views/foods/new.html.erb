@@ -1,0 +1,21 @@
+<section class="show-posts">
+  <div class="user-container">
+    <%= form_with model: @food, url: user_foods_path, method: :post, local: true do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <br>
+    <div>
+      <%= f.label :measurement_unit %>
+      <%= f.text_field :measurement_unit, class: 'form-control' %>
+    </div>
+    <div>
+      <%= f.label :price %>
+      <%= f.number_field :price, class: 'form-control', min: 1, max: 10000 %>
+    </div>
+      <%= f.submit 'Create new food'%>
+    <%end%>
+  </div>
+
+</section>
