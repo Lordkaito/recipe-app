@@ -65,3 +65,183 @@
   height: 50%;
   font-size: 20px;
 }
+
+.add-modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.add-modal:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.add-recipe-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgba(194, 168, 168, 0.644);
+	width: min(70%, 500px);
+  height: min(100%, 600px);
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+}
+
+.add-recipe-form > input {
+  align-self: center;
+  width: min(60%, 60px);
+  border: none;
+  border-radius: 5%;
+  background: none;
+  padding: 6px;
+  outline: 1px solid rgb(15, 129, 0);
+  transition: .15s ease-in-out;
+  transition: outline .18s ease-in;
+}
+
+.add-recipe-form > input:hover {
+  box-shadow: 0 0 3pt 2pt rgb(15, 129, 0);
+  outline: none;
+  background: rgba(77, 187, 62, 0.555);
+  transition: .18s ease-in-out;
+  transition: outline .18s ease-in 0.1s;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 12px;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description > textarea {
+  height: min(15vh, 100px);
+  margin-top: 5%;
+  background: rgba(224, 202, 202, 0.644);
+}
+
+#name {
+  width: 85%;
+  border: none;
+  background: rgba(224, 202, 202, 0.644);
+}
+
+#preparation_time,
+#cooking_time {
+  width: min(8%, 20px);
+  border: none;
+  background: rgba(224, 202, 202, 0.644);
+}
+
+#name:focus,
+.description > textarea:focus,
+#preparation_time:focus,
+#cooking_time:focus {
+  font-size: 14px;
+  outline: none;
+}
+
+.recipe-times {
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.recipe-checkbox {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 4%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(182, 1, 1);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #297e02;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #297e02;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
