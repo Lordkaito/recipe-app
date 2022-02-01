@@ -2,7 +2,7 @@
 <li class="recipe">
   <div class="left-recipe-container">
     <h2><%= recipe.name %></h2>
-    <%= button_to 'REMOVE', [current_user, recipe], method: :delete, class: 'recipe-remove-btn'%>
+    <% if can? :destroy, recipe %><%= button_to 'REMOVE', [current_user, recipe], method: :delete, class: 'recipe-remove-btn'%><% end %>
   </div>
   <div class="recipe-description">
     <%= recipe.description.truncate(100, separator: ' ') %>
