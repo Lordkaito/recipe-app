@@ -1,3 +1,4 @@
+<%= link_to [current_user, recipe], class: 'recipe-link' do %>
 <li class="recipe">
   <div class="left-recipe-container">
     <h2><%= recipe.name %></h2>
@@ -7,3 +8,4 @@
     <%= recipe.description.truncate(100, separator: ' ') %>
   </div>
 </li>
+<% end %>
