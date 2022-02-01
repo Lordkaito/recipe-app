@@ -1,3 +1,4 @@
+<% if can? :read, @recipe %>
 <div class="show-recipe-container">
   <h2><%= @recipe.name %></h2>
   <div class="recipe-prep-and-public">
@@ -16,8 +17,10 @@
   </div>
   <p>Cooking time: <%= @recipe.cooking_time %> minutes</p>
   <p><%= @recipe.description %></p>
+  <% if can? :manage, @recipe %>
   <a class='recipe-add-ingredient' href="#openAdd">Add recipe</a>
   <%= render 'recipe_foods/add_ingredient' %>
+  <% end %>
 </div>
 <table class="recipe-foods-table">
   <tr>
@@ -28,3 +31,4 @@
   </tr>
   <%= render @recipe_foods %>
 </table>
+<% end %>
