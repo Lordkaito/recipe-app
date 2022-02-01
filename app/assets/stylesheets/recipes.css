@@ -216,7 +216,7 @@ input::-webkit-inner-spin-button {
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
+  left: 2px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
@@ -232,8 +232,6 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -244,4 +242,42 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.show-recipe-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  padding: 0.2%;
+  font-size: 1.4em;
+}
+
+.show-recipe-container > h2 {
+  align-self: center;
+}
+
+.recipe-prep-and-public {
+  justify-content: space-between;
+  display: flex;
+}
+
+.recipe-add-ingredient {
+  align-self: end;
+  width: min(60%, 100px);
+  border: none;
+  border-radius: 8%;
+  background: none;
+  padding: 6px;
+  outline: 1px solid rgb(15, 129, 0);
+  transition: .15s ease-in-out;
+  transition: outline .18s ease-in;
+  margin-top: 4%;
+}
+
+.recipe-add-ingredient:hover {
+  box-shadow: 0 0 3pt 2pt rgb(15, 129, 0);
+  outline: none;
+  background: rgba(77, 187, 62, 0.555);
+  transition: .18s ease-in-out;
+  transition: outline .18s ease-in 0.1s;
 }
