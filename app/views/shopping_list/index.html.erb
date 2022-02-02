@@ -1,0 +1,32 @@
+<section class="shopping-list">
+  <h1 class="shop-header">Shopping List</h1>
+  <h3 class="items-to-buy">Total items to buy:<%=@total_items%></h3>
+  <table cellspacing="0" class="shop-table">
+    <thead>
+      <tr class="headers">
+        <th>Recipe name</th>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipes.each do |recipe| %>
+          <% recipe.recipe_foods.each do |recipe_food| %>
+        <tr class="food-info">
+          <td><%= recipe_food.recipe.name %></td>
+          <td><%= recipe_food.food.name %></td>
+          <td><%= recipe_food.quantity %></td>
+          <td><%= recipe_food.food.price * recipe_food.quantity %>$</td>
+        </tr>
+        <%end%>
+      <% end %>
+      <tr>
+        <td colspan="4" class="total-cost">
+          Total cost: <%= @total_cost%>$
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
