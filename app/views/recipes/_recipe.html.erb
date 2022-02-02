@@ -1,0 +1,11 @@
+<%= link_to [current_user, recipe], class: 'recipe-link' do %>
+<li class="recipe">
+  <div class="left-recipe-container">
+    <h2><%= recipe.name %></h2>
+    <% if can? :destroy, recipe %><%= button_to 'REMOVE', [current_user, recipe], method: :delete, class: 'recipe-remove-btn'%><% end %>
+  </div>
+  <div class="recipe-description">
+    <%= recipe.description.truncate(100, separator: ' ') %>
+  </div>
+</li>
+<% end %>

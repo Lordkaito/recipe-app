@@ -1,0 +1,8 @@
+<tr>
+  <td><%= recipe_food.food.name %></td>
+  <td><%= recipe_food.quantity || 0 %> <%= recipe_food.food.measurement_unit %></td>
+  <td><%= recipe_food.food.price %>$</td>
+  <% if can? :manage, @recipe %>
+  <td><a href="#">MODIFY</a> <%= button_to 'REMOVE',  [@recipe, recipe_food], method: :delete, class: 'recipe-remove-btn'%></td>
+  <% end %>
+</tr>

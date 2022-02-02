@@ -1,0 +1,12 @@
+<div id="openAdd" class="add-modal">
+  <%= form_with scope: :recipe_food, url: [@recipe, :recipe_foods], class: 'add-recipe-form' do |f|%>
+    <h2>Add a new food to your recipe</h2>
+    <a href="#close" title="Close" class="close">X</a>
+    <%= f.select :food_id, @foods.collect { |food| [food.name, food.id] } %>
+    <div class="recipe-times">
+      <%= f.label :quantity %>
+      <%= f.number_field :quantity %>
+    </div>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
