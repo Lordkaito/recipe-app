@@ -1,16 +1,11 @@
 class RecipesController < ApplicationController
-  def index
-  end
-  
-  def show
-  end
+  def index; end
 
-  def create
-  end
+  def show; end
 
-  def public_recipes
-  end
+  def create; end
 
-  def destroy
-  end
+  def public_recipes; end
+
+  def destroy; end
 end
