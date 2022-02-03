@@ -17,8 +17,7 @@ RSpec.describe 'Recipe show', type: :feature do
       expect(page).to have_content 'boiled egg'
       expect(page).to have_content 'Preparation time: 2 minutes'
       expect(page).to have_content 'Cooking time: 5 minutes'
-      expect(page).to have_content 'Put the egg in boiling water for about 5 minutes,
-      slightly less if you like the yolk underdone'
+      expect(page).to have_content 'Put the egg in boiling water for about 5 minutes, slightly less if you like the yolk underdone'
     end
     it 'can see the button to add new recipe' do
       expect(page).to have_content 'Add food'

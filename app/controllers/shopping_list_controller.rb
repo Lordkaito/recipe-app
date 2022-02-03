@@ -9,6 +9,7 @@ class ShoppingListController < ApplicationController
   end
 
   def total_cost_of_recipe(recipes)
+    0 unless recipes.any?
     @total_cost = 0
     recipes.each do |recipe|
       recipe.recipe_foods.each do |recipe_food|
@@ -19,6 +20,7 @@ class ShoppingListController < ApplicationController
   end
 
   def total_items_for_recipe(recipes)
+    0 unless recipes.any?
     @total_items = 0
     recipes.each do |recipe|
       @total_items += recipe.recipe_foods.count
