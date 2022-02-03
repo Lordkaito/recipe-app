@@ -20,10 +20,10 @@ RSpec.describe 'Recipe show', type: :feature do
       expect(page).to have_content 'Put the egg in boiling water for about 5 minutes, slightly less if you like the yolk underdone'
     end
     it 'can see the button to add new recipe' do
-      expect(page).to have_content 'Add food'
+      expect(page).to have_content 'Add ingredient'
     end
     it 'can add a new food' do
-      click_link 'Add food'
+      click_link 'Add ingredient'
       select 'Egg', from: 'recipe_food[food_id]'
       fill_in 'Quantity', with: 1
       click_button 'Submit'
@@ -31,7 +31,7 @@ RSpec.describe 'Recipe show', type: :feature do
     end
 
     it 'expects the user to be able to remove a food' do
-      click_link 'Add food'
+      click_link 'Add ingredient'
       select 'Egg', from: 'recipe_food[food_id]'
       fill_in 'Quantity', with: 1
       click_button 'Submit'

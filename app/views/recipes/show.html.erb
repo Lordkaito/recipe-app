@@ -18,7 +18,7 @@
   <p>Cooking time: <%= @recipe.cooking_time %> minutes</p>
   <p><%= @recipe.description %></p>
   <% if can? :manage, @recipe %>
-  <a class='recipe-add-ingredient' href="#openAdd">Add food</a>
+  <a class='recipe-add-ingredient' href="#openAdd">Add ingredient</a>
   <%= render 'recipe_foods/add_ingredient' %>
   <% end %>
 </div>
