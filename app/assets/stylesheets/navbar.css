@@ -1,0 +1,17 @@
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  height: 100%;
+  margin: 0;
+}
+
+.navbar {
+  margin: 0;
+  height: 100px;
+}
+
+.nav-list li a {
+  padding: 10px;
+}

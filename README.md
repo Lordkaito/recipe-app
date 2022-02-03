@@ -44,7 +44,8 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Leonardo Paz**
 
-- GitHub: [@](https://github.com/leolpaz)
+- Github: [Leonardo Paz](https://github.com/leolpaz)
+- Linkedin: [Leonardo Paz](https://www.linkedin.com/in/leonardolpaz/)
 
 ## 🤝 Contributing
 

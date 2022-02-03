@@ -1,0 +1,58 @@
+.foods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.add-food-button {
+  justify-self: flex-end;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px 1px;
+}
+
+.foods table {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.foods td {
+  text-align: center;
+}
+
+.foods th,
+.foods td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.new-food-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.new-food {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 20px;
+}

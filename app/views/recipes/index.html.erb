@@ -1,0 +1,36 @@
+<ul class="recipe-container">
+<% if can? :manage, Recipe %>
+  <a class='recipe-add' href="#openAdd">Add recipe</a>
+  <div id="openAdd" class="add-modal">
+    <%= form_with scope: :recipe, class: 'add-recipe-form' do |f|%>
+      <h2>Add new recipe!</h2>
+      <a href="#close" title="Close" class="close">X</a>
+      <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="description">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+      <div class="recipe-times">
+        <%= f.label :preparation_time %>
+        <%= f.number_field :preparation_time %> minutes
+      </div>
+      <div class="recipe-times">
+        <%= f.label :cooking_time %>
+        <%= f.number_field :cooking_time %> minutes
+      </div>
+      <div class="recipe-checkbox">
+        Public
+        <label class="switch">
+        <%= f.check_box :public, class: 'form-check-input' %>
+        <span class="slider round"></span>
+        </label>
+      </div>
+      <%= f.submit "Submit" %>
+<% end %>
+</div>
+ <%= render @recipes %>
+ <% end %>
+</ul>

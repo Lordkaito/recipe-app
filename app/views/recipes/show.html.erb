@@ -1,0 +1,34 @@
+<% if can? :read, @recipe %>
+<div class="show-recipe-container">
+  <h2><%= @recipe.name %></h2>
+  <div class="recipe-prep-and-public">
+    <p>Preparation time: <%= @recipe.preparation_time %> minutes</p>
+    <div class="recipe-checkbox">
+      Public
+      <label class="switch">
+        <% if @recipe.public %>
+        <input type="checkbox" checked disabled>
+        <% else %>
+        <input type="checkbox" disabled>
+        <%end%>
+        <span class="slider round" checked></span>
+      </label>
+    </div>
+  </div>
+  <p>Cooking time: <%= @recipe.cooking_time %> minutes</p>
+  <p><%= @recipe.description %></p>
+  <% if can? :manage, @recipe %>
+  <a class='recipe-add-ingredient' href="#openAdd">Add ingredient</a>
+  <%= render 'recipe_foods/add_ingredient' %>
+  <% end %>
+</div>
+<table class="recipe-foods-table">
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Value</th>
+    <% if can? :manage, @recipe %><th>Actions</th><% end %>
+  </tr>
+  <%= render @recipe_foods %>
+</table>
+<% end %>

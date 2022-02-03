@@ -1,0 +1,12 @@
+<%= link_to recipe_path(public_recipe.id), class: 'recipe-link' do %>
+<li class="recipe">
+  <div class="left-recipe-container">
+    <h2><%=public_recipe.name %></h2>
+    <h3>by <%= public_recipe.user.name %> <h3>
+  </div>
+  <div class="recipe-items">
+    <p>Total food items: <%=public_recipe.recipe_foods.length %>
+    <p>Total price: <%= get_food_sum(public_recipe) %>
+  </div>
+</li>
+<% end %>
