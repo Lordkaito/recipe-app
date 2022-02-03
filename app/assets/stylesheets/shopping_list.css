@@ -1,0 +1,35 @@
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-table table {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.shop-table td {
+  text-align: center;
+  width: 250px;
+}
+
+.shop-table th,
+.shop-table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.total-cost {
+  text-align: right !important;
+  font-weight: bold;
+}
+
+.shop-header {
+  margin: 20px 0;
+}
+
+.items-to-buy {
+  margin: 20px 0;
+}
